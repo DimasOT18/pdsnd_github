@@ -216,6 +216,7 @@ def user_stats(df):
         print(i,':', v)
 
     # TO DO: Display counts of gender
+    # adding if loop to check if Gender data is available for analysis
 
     if df.columns.isin(['Gender']).any():
         gender_series = df['Gender'].value_counts()
