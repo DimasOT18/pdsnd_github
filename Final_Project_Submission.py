@@ -18,6 +18,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
     cities = ['chicago','new york','washington']
+    options = ['month','day','not at all']
 
     class Illegal(Exception):
         pass
@@ -41,7 +42,7 @@ def get_filters():
     while True:
         try:
             option = input('Would you like to filter the data by month, day, or not at all?: \n').lower().strip()
-            if option not in ['month','day','not at all']:
+            if option not in options:
                 raise Illegal
             break
         except Illegal:
